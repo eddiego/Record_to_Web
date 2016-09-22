@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Recorder Demo</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
+  <link href="/static/css/main.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container speech-container">
+    <div class="container">
+      <h3> Convert your voice to text</h3>
+    </div>
+    <div class="speech-demo-container" id="speech_demo_record_container">
+      <div class="speech-demo-option-container">
+        <div>
+        마이크 아이콘을 클릭하세요. Chrome 브라우저에서 동작 합니다.
+        </div><br>
+        <select class="selectpicker" id="speech_demo_record_language" name="speech_demo_record_language">
+          <optgroup label="English">
+            <option value="English-GMM">English HMM-GMM(960h)</option>
+            <option value="English-DNN" selected="selected">English HMM-DNN(960h)</option>
+          </optgroup>
+        </select>      
+      </div>
+
+      <div class="speech-demo-button-container">
+        <a class="speech-demo-button" id="speech_demo_record_button" track-type="speech-api" track-name="click-microphone">
+          <div class="material-icons" id="speech_demo_record_icon"></div>
+          <div id="speech_demo_record_caption">
+            <div id="speech_demo_record_processing">Processing</div>
+            <div id="speech_demo_record_timer">00:00 / 0:30</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="container speech_demo_results_container">
+      <div class="well" id="speech_demo_results">
+        결과
+      </div>
+    </div>
+    <div id="speech_demo_unavailable">
+        This webpage requires access to your microphone. Please connect a microphone and allow your browser to access it. </div>
+      <div id="speech_demo_error_container">
+        <span class="material-icons">error</span>
+        <span>We are unable to process your request at this time. Please try again later.</span>
+    </div>    
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+  <script src="/static/js/recorder.js"></script>
+  <script src="/static/js/demo.js"></script>
+  </script>
+</body>
+</html>
