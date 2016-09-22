@@ -1,0 +1,130 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+.jumbotron {
+  background: #000 url("/static/images/main.jpg") center center;
+  background-size: cover;
+  color: #ffffff;
+  font-family: Montserrat;
+  text-align: center;
+}
+
+.speech-container {
+  font-family: 'Nanum Gothic';
+}
+
+.speech-demo-container {
+  /*border: 2px dashed #9b9b9b;*/
+  display: flex;
+  padding: 24px;
+  position: relative;
+  width: 90%;
+}
+
+#speech_demo_unavailable {
+  background: #ECEFF1;
+  display: none;
+  font-size: 24px;
+  padding: 40px;
+}
+
+#speech_demo_error_container {
+  display: none;
+  font-size: 16px;
+  padding: 20px
+}
+
+.speech-demo-option-container {
+  flex: 2;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+#speech_demo_model {
+  /*width: fit-content;*/
+}
+
+.speech-demo-button-container {
+  flex: none;
+}
+
+.speech-demo-button {
+  background: #f4f4f4;
+  display: block;
+  color: #DAE0E4;
+  cursor: pointer;
+  padding: 32px;
+  position: relative;
+  text-align: center;
+}
+
+.speech-demo-button:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15),0 0 3px rgba(0,0,0,0.15);
+  color: #738F9B;
+}
+
+.speech-demo-button.processing {
+  color: #738F9B;
+  box-shadow: none;
+}
+
+.speech-demo-button.processing:hover {
+  cursor: auto;
+}
+
+#speech_demo_record_caption {
+  font-size: 12px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+}
+
+#speech_demo_record_processing,
+#speech_demo_record_timer {
+  display: none;
+}
+
+#speech_demo_record_icon {
+  font-size: 36px;
+  opacity: 0.5;
+}
+
+.speech-demo-button.processing #speech_demo_record_icon {
+  animation: fadeIn .5s infinite alternate;
+  color: #738F9B;
+}
+
+.speech-demo-button #speech_demo_record_icon::before {
+  content: 'mic';
+}
+
+.speech-demo-button.recording #speech_demo_record_icon::before {
+  content: 'stop';
+}
+
+.speech-demo-button.processing #speech_demo_record_icon::before {
+  content: 'publish';
+}
+
+.well {
+  width: 90%;
+  padding-top: 20px;
+}
+
+footer {
+  /*background-color: #593d88;*/
+  background-color: #272e3d;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: Montserrat;
+}
+
+footer a {
+  color: #fff;
+}
