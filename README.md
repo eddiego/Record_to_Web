@@ -1,4 +1,4 @@
-# Record_to_W
+# Record_to_Web
 
 Record your voice with microphone and save to server as wav format.
 
